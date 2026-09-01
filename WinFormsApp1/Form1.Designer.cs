@@ -34,10 +34,10 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            txtSubtotal = new TextBox();
+            txtDiscPrt = new TextBox();
+            txtDiscAmt = new TextBox();
+            txtTotal = new TextBox();
             SuspendLayout();
             // 
             // btnExit
@@ -58,83 +58,86 @@
             btnCalc.TabIndex = 1;
             btnCalc.Text = "Calculate";
             btnCalc.UseVisualStyleBackColor = true;
+            btnCalc.Click += btnCalc_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(193, 188);
+            label1.Location = new Point(161, 197);
             label1.Name = "label1";
-            label1.Size = new Size(78, 32);
+            label1.Size = new Size(201, 32);
             label1.TabIndex = 2;
-            label1.Text = "label1";
+            label1.Text = "Discount Amount";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(193, 44);
+            label2.Location = new Point(161, 53);
             label2.Name = "label2";
-            label2.Size = new Size(78, 32);
+            label2.Size = new Size(103, 32);
             label2.TabIndex = 3;
-            label2.Text = "label2";
+            label2.Text = "Subtotal";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(193, 117);
+            label3.Location = new Point(161, 126);
             label3.Name = "label3";
-            label3.Size = new Size(78, 32);
+            label3.Size = new Size(233, 32);
             label3.TabIndex = 4;
-            label3.Text = "label3";
+            label3.Text = "Discount Percentage";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(193, 251);
+            label4.Location = new Point(161, 260);
             label4.Name = "label4";
-            label4.Size = new Size(78, 32);
+            label4.Size = new Size(65, 32);
             label4.TabIndex = 5;
-            label4.Text = "label4";
+            label4.Text = "Total";
             // 
-            // textBox1
+            // txtSubtotal
             // 
-            textBox1.Location = new Point(401, 42);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(200, 39);
-            textBox1.TabIndex = 6;
+            txtSubtotal.Location = new Point(412, 53);
+            txtSubtotal.Name = "txtSubtotal";
+            txtSubtotal.Size = new Size(200, 39);
+            txtSubtotal.TabIndex = 6;
             // 
-            // textBox2
+            // txtDiscPrt
             // 
-            textBox2.Enabled = false;
-            textBox2.Location = new Point(401, 108);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 39);
-            textBox2.TabIndex = 7;
+            txtDiscPrt.Enabled = false;
+            txtDiscPrt.Location = new Point(412, 119);
+            txtDiscPrt.Name = "txtDiscPrt";
+            txtDiscPrt.Size = new Size(200, 39);
+            txtDiscPrt.TabIndex = 7;
             // 
-            // textBox3
+            // txtDiscAmt
             // 
-            textBox3.Enabled = false;
-            textBox3.Location = new Point(401, 181);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(200, 39);
-            textBox3.TabIndex = 8;
+            txtDiscAmt.Enabled = false;
+            txtDiscAmt.Location = new Point(412, 192);
+            txtDiscAmt.Name = "txtDiscAmt";
+            txtDiscAmt.Size = new Size(200, 39);
+            txtDiscAmt.TabIndex = 8;
             // 
-            // textBox4
+            // txtTotal
             // 
-            textBox4.Enabled = false;
-            textBox4.Location = new Point(401, 250);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(200, 39);
-            textBox4.TabIndex = 9;
+            txtTotal.Enabled = false;
+            txtTotal.Location = new Point(412, 261);
+            txtTotal.Name = "txtTotal";
+            txtTotal.Size = new Size(200, 39);
+            txtTotal.TabIndex = 9;
             // 
             // Form1
             // 
+            AcceptButton = btnCalc;
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = btnExit;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtTotal);
+            Controls.Add(txtDiscAmt);
+            Controls.Add(txtDiscPrt);
+            Controls.Add(txtSubtotal);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -155,9 +158,9 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox txtSubtotal;
+        private TextBox txtDiscPrt;
+        private TextBox txtDiscAmt;
+        private TextBox txtTotal;
     }
 }
